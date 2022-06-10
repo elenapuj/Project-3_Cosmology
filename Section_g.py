@@ -2,16 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
-
 #We load the needed arrays from e) and calculate epsilon
 
-with open('Psi.txt', 'rb') as f:
+with open('Psi1.txt', 'rb') as f:
 
     Psi = np.load(f)
 
 
-with open('tau.txt', 'rb') as f:
+with open('tau1.txt', 'rb') as f:
 
     tau = np.load(f)
 
@@ -52,7 +50,7 @@ print('tau=', tau[pos_max])
 
 #And then we calculate Ntot using ln(a/a_i)
 
-with open('A.txt', 'rb') as f:
+with open('A1.txt', 'rb') as f:
 
     A = np.load(f)
 

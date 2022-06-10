@@ -3,27 +3,19 @@ import matplotlib.pyplot as plt
 
 
 
-#First we introduce some constants and initial values that we may need and also load the needed arrays from section e)
+#First we load the needed arrays from section e)
 
-c = 3e8  #m/s
-
-G = 6.67e-11  #m³/kgs²
-
-hbar = 1.055e-34  #Js
-
-Psii = np.sqrt(1001/np.pi) / 2
-
-with open('Psi.txt', 'rb') as f:
+with open('Psi1.txt', 'rb') as f:
 
     Psi = np.load(f)
 
 
-with open('A.txt', 'rb') as f:
+with open('A1.txt', 'rb') as f:
 
     A = np.load(f)
 
 
-with open('tau.txt', 'rb') as f:
+with open('tau1.txt', 'rb') as f:
 
     tau = np.load(f)
 
@@ -32,9 +24,9 @@ with open('tau.txt', 'rb') as f:
 
 #Now we calculate ln(a/ai) and Psi
 
-Psi_SRA = Psii - tau / (4 * np.pi * Psii)
+Psi_SRA = Psi[0] - tau / (4 * np.pi * Psi[0])
 
-A_SRA = tau - tau**2 / (8 * np.pi * Psii**2)
+A_SRA = tau - tau**2 / (8 * np.pi * Psi[0]**2)
 
 
 

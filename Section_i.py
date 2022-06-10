@@ -4,17 +4,17 @@ import matplotlib.pyplot as plt
 
 #First we do some set up
 
-with open('dPsi.txt', 'rb') as f:
+with open('dPsi1.txt', 'rb') as f:
 
     dPsi = np.load(f)
 
 
-with open('v.txt', 'rb') as f:
+with open('v1.txt', 'rb') as f:
 
     v = np.load(f)
 
 
-with open('tau.txt', 'rb') as f:
+with open('tau1.txt', 'rb') as f:
 
     tau = np.load(f)
 
@@ -40,5 +40,3 @@ plt.ylabel(r'$p_\phi / \rho_\phi c^2$')
 plt.title('Ratio (13) using our numerical solution')
 plt.savefig('Figure 6.pdf')
 plt.show()
-
-
